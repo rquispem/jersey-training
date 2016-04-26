@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Created by rquispe on 4/26/16.
  */
-@Path("books")
+@Path("/books")
 public class BookResource {
 
 	@Produces(MediaType.TEXT_PLAIN)
@@ -17,9 +17,10 @@ public class BookResource {
 		return "Hello";
 	}
 
-	@Path("/author")
-	public String getAuthor(){
-		return "ruben quispe";
+	@Path("/{bookId}/author")
+	public AuthorResource getAuthor(){
+		return new AuthorResource();
 	}
+
 
 }
