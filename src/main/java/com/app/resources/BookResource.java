@@ -18,7 +18,7 @@ public class BookResource {
 	}
 
 	@Path("/{bookId}/author")
-	public AuthorResource getAuthor(){
+	public AuthorResource getAuthor() {
 		return new AuthorResource();
 	}
 
