@@ -20,5 +20,8 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '2.13'
 }
+
+//put org.gradle.daemon=true on  «USER_HOME»/.gradle/gradle.properties to make builds faster only for devs
+//gradle --stop    to stops the daemon
